@@ -1,0 +1,22 @@
+<div>
+  <h1>Employee List:</h1>
+  <table border="1">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let emp of empList">
+      <td>{{emp.id}}</td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.age}}</td>
+      <td>
+        <button (click)="viewEmployee(emp.id)">View</button>
+      </td>
+    </tr>
+  </table>
+
+
+  <app-emp-detail *ngIf="employee.id !== null" [empData]="employee"></app-emp-detail>
+</div>

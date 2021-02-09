@@ -1,0 +1,7 @@
+<div>
+  <p>Counter: {{counter}}</p>
+  <app-counter-actions
+  (incrementEvent)="increment()"
+  (decrementEvent)="decrement()"
+  (setValueEvent)="setCounter($event)"></app-counter-actions>
+</div>
